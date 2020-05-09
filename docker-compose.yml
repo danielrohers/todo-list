@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  api:
+    container_name: todo-list-api
+    depends_on:
+      - mongo
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    command: npm start
+    env_file: .env
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/usr/src/todo-list-api
+      - .:/usr/src/todo-list-api/node_modules
+
+  mongo:
+    container_name: todo-list-mongo
+    image: mongo:latest
+    command: mongod

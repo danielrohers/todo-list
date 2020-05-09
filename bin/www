@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+import log from 'winston';
+import cluster from 'cluster';
+import os from 'os';
+
+const cpuCount = os.cpus().length;
+
+cluster.setupMaster({ exec: 'server.js' });
+
+for (let i = 0; i < cpuCount; i++) cluster.fork();
+
+cluster.on('exit', (worker) => {
+  log.info(`Worker ${ worker.id } died :(`);
+});
