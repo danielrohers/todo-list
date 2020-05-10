@@ -1,6 +1,6 @@
 FROM node:latest
 
-ENV APP=/usr/src/todo-list-api
+ENV APP=/usr/src/todo-list-front-end
 
 WORKDIR $APP
 
@@ -12,6 +12,6 @@ RUN yarn
 
 COPY . $APP
 
-EXPOSE 3001
+EXPOSE 3000
 
 CMD npm start

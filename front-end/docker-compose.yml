@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  front-end:
+    container_name: todo-list-front-end
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    command: npm start
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/usr/src/todo-list-front-end
+      - /usr/src/todo-list-front-end/node_modules
+    stdin_open: true
