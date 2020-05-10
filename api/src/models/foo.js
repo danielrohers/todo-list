@@ -7,6 +7,8 @@ const FooSchema = new Schema({
     type: String,
     required: true
   }
+}, {
+  timestamps: true
 });
 
 module.exports.FooModel = mongoose.model('Foo', FooSchema);

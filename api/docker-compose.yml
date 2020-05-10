@@ -14,9 +14,11 @@ services:
       - 3000:3000
     volumes:
       - .:/usr/src/todo-list-api
-      - .:/usr/src/todo-list-api/node_modules
+      - /usr/src/todo-list-api/node_modules
 
   mongo:
     container_name: todo-list-mongo
     image: mongo:latest
     command: mongod
+    ports:
+      - 27017:27017

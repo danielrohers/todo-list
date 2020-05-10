@@ -18,3 +18,4 @@ rules:
   no-underscore-dangle: ["error", { "allow": ["_id", "_plain_password"] }]
   guard-for-in: off
   no-restricted-syntax: off
+  no-throw-literal: off

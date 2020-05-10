@@ -2,13 +2,17 @@ const { AuthService } = require('../services/auth');
 
 module.exports.AuthMiddleware = async (req, res, next) => {
   try {
-    const { token } = req.body;
+    const token = req.headers['x-access-token'];
 
     if (!token) {
       return next({ status: 403, message: 'Forbidden' });
     }
 
-    if (await AuthService.verify(token)) {
+    const user = await AuthService.getUser(token);
+
+    if (user) {
+      req.user = user;
+      req.userId = user._id;
       return next();
     }
 

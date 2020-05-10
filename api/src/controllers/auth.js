@@ -22,7 +22,7 @@ module.exports.AuthController = {
         password: Joi.string().required()
       }).validate(req.body);
 
-      if (error) return next({ message: error });
+      if (error) return next(error);
 
       const { email, password } = req.body;
 
@@ -61,7 +61,7 @@ module.exports.AuthController = {
         password: Joi.string().required()
       }).validate(req.body);
 
-      if (error) return next({ message: error });
+      if (error) return next(error);
 
       const { name, email, password } = req.body;
 
@@ -86,8 +86,6 @@ module.exports.AuthController = {
   /**
   * @api {post} /auth/verify Verify
   * @apiGroup Auth
-  *
-  * @apiParam {String} token
   *
   * @apiSuccess (403) {String} message
   * @apiSuccess (403) {Number=403} status

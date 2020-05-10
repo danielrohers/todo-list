@@ -23,6 +23,8 @@ const UserSchema = new Schema({
   lastLogin: {
     type: Number
   }
+}, {
+  timestamps: true
 });
 
 UserSchema.methods.encryptPassword = function encryptPassword(password) {
