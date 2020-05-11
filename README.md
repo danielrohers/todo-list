@@ -17,7 +17,9 @@ $ docker-compose up -d
 
 ```bash
 # todo-list/front-end
-$ cd front-end && docker-compose up -d
+$ cd front-end
+$ cp .env.example .env
+$ cd docker-compose up -d
 ```
 
 **Go to** [http://localhost:3000](http://localhost:3000)
