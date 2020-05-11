@@ -13,6 +13,7 @@ module.exports.AuthMiddleware = async (req, res, next) => {
     if (user) {
       req.user = user;
       req.userId = user._id;
+      req.token = token;
       return next();
     }
 

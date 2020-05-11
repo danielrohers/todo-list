@@ -96,10 +96,10 @@ module.exports.AuthController = {
   * @apiSuccess (500) {Boolean=false} success
   *
   * @apiSuccess {Boolean=true} success
-  * @apiSuccess {String} data
+  * @apiSuccess {Object} data
   */
   verify(req, res) {
-    res.status(200).json({ success: true, data: 'Valid token' });
+    res.status(200).json({ success: true, data: { user: req.user, token: req.token } });
   }
 
 };
