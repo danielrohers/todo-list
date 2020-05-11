@@ -7,8 +7,29 @@
 
 .Header-links {
   display: flex;
+  justify-content: flex-end;
 }
 
-.Header-link a {
-  color: $white;
+.Header-link {
+  &--brand {
+    margin-right: auto;
+  }
+  
+  span,
+  a {
+    color: $white;
+  }
+
+  svg {
+    margin-left: 1em;
+    cursor: pointer;
+
+    &:hover path {
+      fill: $colorGainsboro;
+    }
+  }
+
+  path {
+    fill: $white;
+  }
 }

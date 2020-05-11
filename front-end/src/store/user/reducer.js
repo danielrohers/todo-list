@@ -11,12 +11,12 @@ const fetchSuccess = (state, { data }) => {
   };
 };
 
-const fetchError = (state, { error }) => ({
+const remove = (state, ) => ({
   ...state,
-  error,
+  user: undefined,
 });
 
 export const reducer = {
-  [types.AUTH_FETCH_SUCCESS]: fetchSuccess,
-  [types.AUTH_FETCH_ERROR]: fetchError
+  [types.USER_FETCH_SUCCESS]: fetchSuccess,
+  [types.USER_REMOVE]: remove
 };

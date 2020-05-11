@@ -4,7 +4,9 @@ import { addError } from '../error/actions';
 import { signIn, signUp, verify } from '../../api/AuthAPI';
 import { checkToken } from 'src/helpers/token';
 
-const fetchSuccess = (data) => ({ type: types.AUTH_FETCH_SUCCESS, data });
+const fetchSuccess = (data) => ({ type: types.USER_FETCH_SUCCESS, data });
+
+export const remove = () => ({ type: types.USER_REMOVE });
 
 export const fetchSignIn = (params) => async (dispatch) => {
   try {
