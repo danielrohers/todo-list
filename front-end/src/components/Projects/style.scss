@@ -1,0 +1,13 @@
+.Projects {
+  margin-top: 2em;
+  padding: 2em;
+}
+
+.Projects-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  .Project {
+    margin: 1em;
+  }
+}

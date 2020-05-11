@@ -1,0 +1,13 @@
+.Checkbox {
+
+  &,
+  + .Checkbox-label {
+    cursor: pointer;
+  }  
+
+  &:disabled,
+  &:disabled + .Checkbox-label {
+    cursor: not-allowed;
+  }
+
+}

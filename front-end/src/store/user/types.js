@@ -1,0 +1,4 @@
+export const types = {  
+  AUTH_FETCH_SUCCESS: 'AUTH_FETCH_SUCCESS',
+  AUTH_FETCH_ERROR: 'AUTH_FETCH_ERROR'
+};

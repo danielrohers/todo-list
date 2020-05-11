@@ -1,0 +1,29 @@
+@import '../../variables';
+
+.Auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 450px;
+  margin: auto;
+  padding: 2em;
+  margin-top: 1em;
+  animation: all 300ms ease;
+
+  .Error {
+    text-align: center;
+  }
+}
+
+.Auth-title {
+  margin-bottom: 1.5em;
+  font-size: 2em;
+}
+
+.Auth-form,
+.Auth-form form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}

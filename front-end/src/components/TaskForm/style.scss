@@ -1,0 +1,17 @@
+@import '../../variables';
+
+.TaskForm {
+
+  form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .Input,
+  .Button {
+    padding: .5em;
+    border-radius: .5em;
+  }
+
+}

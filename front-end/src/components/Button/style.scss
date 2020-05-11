@@ -1,0 +1,15 @@
+@import '../../variables';
+
+.Button {
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 1em;
+  border: 0;
+  background-color: $colorDavyGrey;
+  color: $white;
+  cursor: pointer;
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba(70, 73, 76, 0.5);
+  }
+}

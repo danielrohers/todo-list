@@ -1,0 +1,40 @@
+@import '../../variables';
+
+.Project-title {
+  display: flex;
+  justify-content: flex-start;
+  background-color: $colorBlackCoral;
+  color: $white;
+  padding: .5em;
+  border-top-right-radius: .5em;
+  border-top-left-radius: .5em;
+
+  .Input {
+    padding: .5em;
+    border-radius: .5em;
+    margin-bottom: 0;
+  }
+}
+
+.Project-icons {
+  margin-left: auto;
+
+  svg {
+    cursor: pointer;
+    margin-left: .5em;
+
+    &:hover path {
+      fill: $colorSilverSand;
+    }
+  }
+
+  path {
+    fill: $colorGainsboro;
+  }
+}
+
+.Project {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}

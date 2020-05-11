@@ -1,0 +1,28 @@
+@import '../../variables';
+
+.Tasks {
+  padding: 1em;
+}
+
+.Tasks-list {
+  margin-bottom: 1em;
+}
+
+.Task {
+  display: flex;
+  align-items: center;
+  padding: .5em 0;
+  border-bottom: 1px solid $colorSilverSand;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+  
+  .Checkbox {
+    margin-right: .5em;
+  }
+
+  svg {
+    margin-left: auto;
+  }
+}

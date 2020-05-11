@@ -1,0 +1,14 @@
+@import '../../variables';
+
+.Header {
+  padding: 1em;
+  background-color: $colorBlackCoral;
+}
+
+.Header-links {
+  display: flex;
+}
+
+.Header-link a {
+  color: $white;
+}

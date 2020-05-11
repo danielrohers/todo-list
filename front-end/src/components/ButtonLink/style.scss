@@ -1,0 +1,13 @@
+@import '../../variables';
+
+.ButtonLink {
+  cursor: pointer;
+  color: $colorBlue;
+  background-color: transparent;
+  border: 0;
+  margin-bottom: 1em;
+
+  &:visited {
+    border: 0;
+  }
+}
