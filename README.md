@@ -10,7 +10,9 @@
 
 ```bash
 # todo-list/api
-$ cd api && docker-compose up -d
+$ cd api
+$ cp .env.example .env
+$ docker-compose up -d
 ```
 
 ```bash

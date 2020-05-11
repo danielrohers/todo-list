@@ -11,5 +11,5 @@ services:
       - 3000:3000
     volumes:
       - .:/usr/src/todo-list-front-end
-      - ./usr/src/todo-list-front-end:/node_modules
+      - /usr/src/todo-list-front-end/node_modules
     stdin_open: true
